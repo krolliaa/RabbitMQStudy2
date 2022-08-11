@@ -12,8 +12,12 @@ class RabbitMqStudy2ApplicationTests {
     private RabbitTemplate rabbitTemplate;
 
     @Test
-    void contextLoads() {
+    void producer1() {
         rabbitTemplate.convertAndSend("exchange.fanout", "key.direct", "Hello Direct RabbitMQ");
     }
 
+    @Test
+    void producer2() {
+        rabbitTemplate.convertAndSend("exchange.direct", "hotCoffee", "Hello Coffee");
+    }
 }
