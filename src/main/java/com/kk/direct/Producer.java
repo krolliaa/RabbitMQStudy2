@@ -22,6 +22,6 @@ public class Producer {
         channel.queueBind("queue.type.direct1", "exchange.type.direct", "key.typ.direct");
         channel.queueBind("queue.type.direct2", "exchange.type.direct", "key.*.direct");
         channel.queueBind("queue.type.direct3", "exchange.type.direct", "key.tyq.direct");
-        channel.basicPublish("exchange.type.direct", "key.typ.direct", null, "Hello RabbitMQ!".getBytes());
+        channel.basicPublish("exchange.type.direct", "key.tyq.direct", null, "Hello RabbitMQ!".getBytes());
     }
 }
