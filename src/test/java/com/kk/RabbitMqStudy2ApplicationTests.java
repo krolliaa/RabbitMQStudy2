@@ -20,4 +20,9 @@ class RabbitMqStudy2ApplicationTests {
     void producer2() {
         rabbitTemplate.convertAndSend("exchange.direct", "hotCoffee", "Hello Coffee");
     }
+
+    @Test
+    void producer3() {
+        rabbitTemplate.convertAndSend("exchange.topic", "cold.coffee", "1 杯热咖啡");
+    }
 }
